@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(327, 73%, 97%);
+  --foreground: hsl(326, 7%, 17%);
+  --muted: hsl(329, 36%, 95%);
+  --muted-foreground: hsl(326, 7%, 44%);
+  --popover: hsl(327, 73%, 97%);
+  --popover-foreground: hsl(326, 7%, 17%);
+  --card: hsl(327, 73%, 97%);
+  --card-foreground: hsl(326, 7%, 17%);
+  --border: hsl(329, 36%, 90%);
+  --input: hsl(329, 36%, 90%);
+  --primary: hsl(326, 78%, 68%);
+  --primary-foreground: hsl(327, 73%, 97%);
+  --secondary: hsl(329, 36%, 95%);
+  --secondary-foreground: hsl(326, 7%, 10%);
+  --accent: hsl(329, 36%, 95%);
+  --accent-foreground: hsl(326, 7%, 10%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(326, 78%, 68%);
+  --radius: 0.5rem;
+  
+  /* Custom pink theme colors */
+  --pink-bg: hsl(327, 73%, 97%);
+  --pink-light: hsl(322, 78%, 95%);
+  --pink-accent: hsl(326, 78%, 68%);
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --main-glass-bg: rgba(255, 255, 255, 0.25);
+  --main-glass-border: rgba(255, 255, 255, 0.4);
+}
+
+.dark {
+  --background: hsl(326, 7%, 4%);
+  --foreground: hsl(327, 73%, 97%);
+  --muted: hsl(326, 7%, 15%);
+  --muted-foreground: hsl(327, 73%, 65%);
+  --popover: hsl(326, 7%, 4%);
+  --popover-foreground: hsl(327, 73%, 97%);
+  --card: hsl(326, 7%, 4%);
+  --card-foreground: hsl(327, 73%, 97%);
+  --border: hsl(326, 7%, 15%);
+  --input: hsl(326, 7%, 15%);
+  --primary: hsl(326, 78%, 68%);
+  --primary-foreground: hsl(326, 7%, 4%);
+  --secondary: hsl(326, 7%, 15%);
+  --secondary-foreground: hsl(327, 73%, 97%);
+  --accent: hsl(326, 7%, 15%);
+  --accent-foreground: hsl(327, 73%, 97%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(326, 78%, 68%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased text-foreground;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .main-glass {
+    background: var(--main-glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--main-glass-border);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.4);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+}
+
+@layer utilities {
+  .mobile-optimized {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .glass-mobile {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+}

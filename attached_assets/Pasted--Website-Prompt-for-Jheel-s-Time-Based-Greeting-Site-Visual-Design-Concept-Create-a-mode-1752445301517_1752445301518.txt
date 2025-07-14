@@ -1,0 +1,82 @@
+# Website Prompt for Jheel's Time-Based Greeting Site
+
+## Visual Design Concept
+
+Create a **modern, minimalist website** with a romantic, personalized touch. The design should feature:
+
+- **Background**: A beautiful, soft romantic image - think dreamy landscapes, gentle sunrises/sunsets, or delicate floral patterns that evoke warmth and love
+- **Text Overlay**: A frosted glass container positioned centrally over the background image
+- **Typography**: Clean, modern fonts that are easy to read and feel contemporary
+- **Color Palette**: Soft, warm tones that complement the romantic theme while maintaining readability
+
+## Frosted Glass Text Container
+
+The greeting message should appear in a **translucent container** with these characteristics:
+
+- **Glass Effect**: Semi-transparent background with a subtle blur effect behind it
+- **Shape**: Rounded corners for a modern, soft appearance
+- **Positioning**: Centered on the page with appropriate padding around the text
+- **Shadow**: Gentle drop shadow to create depth and separation from the background
+- **Border**: Subtle light border to define the container edges
+
+## Time-Based Greeting Messages
+
+### Good Morning (4:00 AM - 11:59 AM)
+*"Good morning Jheel! It's [current date] and you're still the prettiest girl in the world. Hope you have an amazing day and stay hydrated. ☀️"*
+
+### Good Afternoon (12:00 PM - 4:49 PM)
+*"Good afternoon beautiful! How's your day going so far? Remember, I'm always here for you no matter what. Hope you're taking care of yourself! 🌸"*
+
+### Good Evening (5:00 PM - 10:59 PM)
+*"Good evening gorgeous! Time to take some rest and have fun. You've worked hard today, so treat yourself to something nice. You deserve it! 🌅"*
+
+### Good Night (11:00 PM - 3:59 AM)
+*"Goodnight princess, see you in my dreams. Rest well and wake up refreshed tomorrow. Sweet dreams! 🌙✨"*
+
+## Technical Implementation Explanation
+
+### How the Time Detection Works
+
+The website needs to **automatically detect the current time** and display the appropriate message. This involves:
+
+1. **Getting Current Time**: The system captures the user's local time when they visit the page
+2. **Time Comparison**: It checks what hour it currently is (0-23 format)
+3. **Message Selection**: Based on the hour, it selects the corresponding greeting message
+4. **Dynamic Date**: The current date is automatically inserted into morning messages
+
+### How the Frosted Glass Effect Works
+
+The **frosted glass appearance** is achieved through:
+
+1. **Background Transparency**: The container has a semi-transparent white background
+2. **Backdrop Filter**: A blur effect is applied to whatever is behind the container
+3. **Layering**: The text container sits on top of the background image with proper z-index
+4. **Border Effects**: Subtle borders and shadows create the glass-like appearance
+
+### How the Responsive Design Works
+
+The website should **adapt to different screen sizes**:
+
+1. **Flexible Container**: The text container adjusts its width based on screen size
+2. **Scalable Text**: Font sizes adapt to ensure readability on mobile and desktop
+3. **Background Scaling**: The background image covers the entire viewport regardless of device
+4. **Touch-Friendly**: Spacing and sizing work well on touch devices
+
+### How the Date Integration Works
+
+For the morning message specifically:
+
+1. **Date Formatting**: The system formats the current date in a readable format (e.g., "Monday, July 14, 2025")
+2. **Dynamic Insertion**: This formatted date replaces the placeholder in the greeting text
+3. **Localization**: The date appears in the user's local format and timezone
+
+### Performance Considerations
+
+The website should be **fast and efficient**:
+
+1. **Lightweight Code**: Minimal JavaScript to check time and update content
+2. **Optimized Images**: Background images compressed for quick loading
+3. **Caching**: Static elements cached for repeat visits
+4. **Instant Updates**: Time-based changes happen immediately without page refresh
+
+This creates a **personalized, romantic experience** that feels fresh and special every time Jheel visits, while maintaining the clean, modern aesthetic you requested.
